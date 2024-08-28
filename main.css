@@ -1,0 +1,518 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    --main-color :#19c8fe;
+    --semi-Blake :rgb(45, 42, 42);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ion-icon ,
+.image  ion-icon{
+    color: white;
+}
+
+
+ul {
+    list-style: none;
+    
+}
+
+
+
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+
+
+/* mobile */
+@media(max-width : 767px){
+    .container{
+        width: 760px;
+    }
+    
+    
+}
+
+
+/* small screen */
+@media(min-width :768px){
+    .container{
+        width: 750px;
+        
+    }
+
+};
+
+
+/* Medium screen */
+@media(min-width : 992px){
+    .container{
+        width: 970px;
+    }
+    
+}
+/* Large screen */
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+header{
+    background-color: var(--semi-Blake);
+
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--semi-Blake);
+    
+}
+
+header .container nav{
+    flex: 1;
+    justify-content: flex-end ;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+header nav .lista{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+header .container nav ul{
+    display: flex;
+}
+
+
+
+nav ul li a{
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 20px 10px;
+    color: white;
+    z-index: 2;
+    position: relative;
+    bottom: 0;
+
+}
+
+
+header .container::after{
+    content: "";
+    width: calc(100% - 30px);
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    
+}
+
+
+nav ul li a:active,
+nav ul li a:hover{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    
+}
+
+nav ul .left {
+    width: 30px;
+    border-left: solid 3px white;
+    margin-left: 30px;
+
+}
+
+nav ul .left a{
+    float: right;
+}
+
+
+
+.image{
+    background-image: url(../img/dark\ backgroud.png);
+    background-size: cover;
+    min-width: 760px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.image .text{
+    width: 50%;
+    color: white;
+    background-color: var(--main-color);
+    padding: 30px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: end;
+
+}
+
+.text .two {
+    max-width: 400px;
+}
+
+.two h2{
+    font-size: 31px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.arrows ion-icon:first-child{
+    position: absolute;
+    left: 5px;
+    font-size: 30px;
+    
+    transform: translate(0 ,-50%);
+
+}
+
+.arrows ion-icon:nth-child(2){
+    position: absolute;
+    right: 5px;
+    font-size: 30px;
+    
+    transform: translate(0 ,-50%);
+
+}
+
+.arrows ul{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    column-gap: 5px;
+    padding: 0;
+    transform: translate(-50% , -50%);
+
+}
+
+.arrows ul li{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 3px white;
+    
+}
+
+.arrows ul li:nth-child(2){
+    background-color: var(--main-color);
+}
+
+.container .service{
+    display: flex;
+    justify-content: center;
+}
+
+.container .service .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container .service .content h2{
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+
+.service .content span{
+    display: block;
+    width: 100px;
+    height: 1px;
+    border-radius: 5px;
+    background: #777;
+    position: relative;
+}
+
+.service .content span::after{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: solid 2px #777;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    background-color: white;
+}
+
+.service .content p{
+    margin-top: 15px;
+    color: #777;
+
+}
+/* grid  */
+.container .serviceList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(450px , 1fr));
+    margin-bottom: 50px;
+    margin-top: 50px;
+    grid-gap: 20px 20px;
+}
+
+.serviceList .svr{
+    display: flex;
+}
+
+.serviceList .svr ion-icon{
+    font-size: 80px;
+    margin-right: 20px;
+    margin-top: -20px;
+}
+
+.serviceList .svr h2{
+    font-weight: normal;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.serviceList .svr p{
+    line-height: 1.5;
+    color: #777;
+}
+
+.mobile{
+    background-image: url(../img/mobile\ shop.jpg);
+    height: 70vh;
+    min-width: 760px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+
+.mobile .mobileContent{
+    width: 50%;
+    color: white;
+    background-color: var(--main-color);
+    padding: 30px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: start;
+    
+}
+
+.mobile .mobileContent .comb h2{
+    margin-bottom: 20px;
+}
+
+.mobile .mobileContent .ourdesigns div{
+    display: flex;
+    align-items: baseline;
+}
+
+
+.mobileContent .ourdesigns div ion-icon{
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: -20px;
+}
+
+.mobileContent .ourdesigns div h2{
+    font-size: 20px;
+}
+
+.choose{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    margin-bottom: 40px;
+
+}
+
+.choose div{
+    padding: 15px;
+
+}
+.choose div:hover,
+.choose div:active{
+    background-color: var(--main-color);
+}
+.choose div a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.listOfImages{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(350px , auto));
+    grid-gap: 10px 10px;
+    padding: 15px;
+}
+
+/* @media (min-width:767px){
+    .listOfImages{
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+} */
+
+@media (max-width:768px){
+    .listOfImages{
+        margin:50%;
+    }
+}
+
+
+.listOfImages .box{
+   text-align: center;
+   padding: 15px;
+   background-color: white;
+   box-shadow: 1px 1px 4px;
+   
+}
+
+.listOfImages .box div h2{
+    font-weight: 400;
+}
+
+.listOfImages .box div p{
+    color: var(--main-color);
+}
+
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+button{
+    padding: 15px;
+    background-color: var(--main-color);
+    color: white;
+    width: 120px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.game{
+    background-image: url(../img/imges/R.jpg);
+    background-size: cover;
+    height: 80vh;
+    min-width: 760px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.game .game-sett{
+    width: 100%;
+    background-color: var(--main-color);
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-sett div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;  
+    text-transform: uppercase;
+}
+
+.game-sett div button{
+    width: 150px;
+    padding: 10px 20px 10px 20px;
+    background-color: black;
+}
+
+.game-sett div h2 {
+    opacity: 1;    
+}
+
+.container .about-img{
+    display: flex;
+    justify-content: center;
+    width:"800px";
+    margin-top: 50px;
+   
+}
+.container .about-img img{
+    z-index: -1;
+}
+
+.aboutTwo{
+    background-image: url(../img/imges/R.jpg);
+    background-size: cover;
+    min-width: 760px ;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    margin-top: -120px;
+
+
+}
+
+.aboutTwo .a{
+background-color: var(--main-color);
+display: flex;
+height: 50%;
+padding: 20px;
+width: 100%;
+justify-content: space-around;
+align-items: center;
+color: white;
+}
+
+.aboutTwo .a .aa{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
+
+.aboutTwo .a .aa ion-icon{
+    background-color: black;
+
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.a .aa p{
+    text-transform: capitalize;
+} 
